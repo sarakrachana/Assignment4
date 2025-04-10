@@ -1,0 +1,43 @@
+/* Gallery container */
+div.gallery {
+    border: 2px solid gold;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Global box-sizing */
+* {
+    box-sizing: border-box;
+}
+
+/* Flexbox layout */
+.gallery-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.responsive {
+    flex: 1 1 calc(25% - 10px); /* 4 items per row with a 10px gap */
+}
+
+/* Responsive layout for smaller screens */
+@media only screen and (max-width: 700px) {
+    .responsive {
+        flex: 1 1 calc(50% - 10px); /* 2 items per row */
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        flex: 1 1 100%; /* 1 item per row */
+    }
+}
